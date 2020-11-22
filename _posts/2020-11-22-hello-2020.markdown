@@ -4,8 +4,7 @@ title:      "Hello 2020"
 subtitle:   "hello world, hello blog"
 date:       2020-11-22 00:22:00
 author:     "Xiaoxianma"
-header-img: "img/post-bg-2015.jpg"
-catalog: true
+header-img: "img/oakley_on_keyboard.jpg"
 tags:
     - life
 ---
