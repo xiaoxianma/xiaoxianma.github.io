@@ -1,0 +1,15 @@
+---
+layout:     post
+title:      "Hello 2020"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2020-11-22 00:22:00
+author:     "Xiaoxianma"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - life
+---
+
+> “An absolutely unforgettable year 2020”
+
+It is not too late to start my blog!
