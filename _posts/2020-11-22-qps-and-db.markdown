@@ -1,0 +1,27 @@
+---
+layout:     post
+title:      "QPS and Database"
+subtitle:   "proper db choice with different qps"
+date:       2020-11-22 21:10:00
+author:     "Xiaoxianma"
+header-img: "img/home-bg-oakley-on-keyboard.jpg"
+tags:
+    - db
+    - qps
+    - sql
+    - nosql
+    - cache
+    - redis
+    - mongodb
+    - postgresql
+---
+
+The performance(query per second) of every database is listed below:  
+
+| TYPE     | Examples           | QPS   |
+|----------|--------------------|-------|
+| SQL      | MySQL, PostgreSQL  | 1k    |
+| NoSQL    | MongoDB, Cassandra | 10k   |
+| InMemory | Redis, Memcached   | 1m    |
+
+Note: The QPS above is just roughly calculated for simple use. It may be varied by the performance of CPU, disk, etc.
