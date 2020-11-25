@@ -23,8 +23,8 @@ Initially, we have 10 hosts storing our data. Data can be stored by `%10`. Someo
 3. Large data migration may run into data inconsistency.  
 
 ## Consistent Hashing
-![test](img/posts/consistent-hashing.png)
-<img class="shadow" src="/img/posts/consistent-hashing.png" width="260">
+![test](/img/posts/consistent-hashing.png)
+<img class="shadow" src="/img/posts/consistent-hashing.png">
 
 ### Simple solution  
 ![test](img/consistent-hashing-simple-1.png)
