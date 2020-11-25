@@ -23,16 +23,15 @@ Initially, we have 10 hosts storing our data. Data can be stored by `%10`. Someo
 3. Large data migration may run into data inconsistency.  
 
 ## Consistent Hashing
-![test](/img/posts/consistent-hashing.png)
-<img class="shadow" src="/img/posts/consistent-hashing.png">
+![](/img/posts/consistent-hashing.png)
 
 ### Simple solution  
-![test](img/consistent-hashing-simple-1.png)
-![](img/consistent-hashing-simple-2.png)
+![](/img/consistent-hashing-simple-1.png)
+![](/img/consistent-hashing-simple-2.png)
 
 There are still some problems:
 - One server is added. The neighbor hosts(one or two) are getting stressed and may impact normal serving.  
 - Everytime, data from new server is only coming from surroudning 1-2 servers. In this case, data are not distributed equially.  
 
 ### Practical solution
-![](img/consistent-hashing-practical-solution.png)
+![](/img/consistent-hashing-practical-solution.png)
