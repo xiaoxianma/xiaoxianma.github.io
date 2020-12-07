@@ -35,7 +35,7 @@ This is the default isolation level for SQL Server. It stops statements from rea
 `While T1 is updating, T2 is blocked to read`
 
 ### Repeatable Read
-This isolation level stops statements from reading data that has been modified but not yet committed by other transactions. It also prevents other transactions from modifying data that has been read by the current transaction until it has completed. It does this by generating shared locks on all data that is read and holding these locks until the transaction is finished.
+This isolation level stops statements from reading data that has been modified but not yet committed by other transactions. It also prevents other transactions from modifying data that has been read by the current transaction until it has completed. It does this by generating shared locks on all data that is read and holding these locks until the transaction is finished.  
 `While T1 is reading, T2 is blocked to update`
 
 ### Serializable
@@ -44,13 +44,14 @@ Specifies the following:
 - Statements are prevented from reading data that has been modified but not yet committed by other transactions.
 - Transactions cannot modify data that has been read by the current transaction until the current transaction completes.
 - Other transactions aren’t allowed to insert new rows into a table read by the current transaction, if their key values fall in the range of keys read by any statements in the current transaction. So they are blocked until the current transaction completes.
-- Range locks are placed on the range of key values that match the search conditions of each statement executed in a transaction.
+- Range locks are placed on the range of key values that match the search conditions of each statement executed in a transaction.  
 `While T1 is reading, T2 is blocked to insert/delete into a table`
 
 ## Cheatsheet Table
-| Isolation Level  | Dirty reads | Non-repeatable reads | Phantoms    |
-|------------------|-------------|----------------------|-------------|
-| Read Uncommitted | May occur   | May occur            | May occur   |
-| Read Committed   | Don't occur | May occur            | May occur   |
-| Repeatable Read  | Don't occur | Don't occur          | May occur   |
-| Serializable     | Don't occur | Don't occur          | Don't occur |
+| Isolation Lvl    | Dirty reads | Non-repeatable reads | Phantoms  |
+|------------------|-------------|----------------------|-----------|
+| Read Uncommitted | May occur   | May occur            | May occur |
+| Read Committed   | Not occur   | May occur            | May occur |
+| Repeatable Read  | Not occur   | Not occur            | May occur |
+| Serializable     | Not occur   | Not occur            | Not occur |
+
