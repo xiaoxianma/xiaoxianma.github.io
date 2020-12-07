@@ -56,8 +56,30 @@ Specifies the following:
 | Repeatable Read  | Not occur | Not occur | May occur |
 | Serializable     | Not occur | Not occur | Not occur |
 
-Note:  
+Note:
 - Dirty:     Dirty reads
 - NonRepeat: Non-repeatable reads
 - Phantom:   Phantom reads
 
+## Transaction Isolation Level in Django
+The defaut transaction isolation level in postgres is **READ COMMITTED**. If you need a higher isolation level such as **REPEATABLE READ** or **SERIALIZABLE**, set it in the OPTIONS part of your database configuration in DATABASES:
+```python
+import psycopg2.extensions
+
+DATABASES = {
+    # ...
+    'OPTIONS': {
+        'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
+    },
+}
+```
+
+Or you can temporarily set the isolation level:
+```python
+from django.db import connection
+
+with transaction.atomic():
+    cursor = connection.cursor()
+    cursor.execute('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ')
+    # logic
+```
