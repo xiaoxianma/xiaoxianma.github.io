@@ -49,10 +49,15 @@ Specifies the following:
 
 ## Cheatsheet Table 
 
-| 1                | 2         | 3         | 4         |
+| Isolation Level  | Dirty     | NonRepeat | Phantom   |
 |------------------|-----------|-----------|-----------|
 | Read Uncommitted | May occur | May occur | May occur |
 | Read Committed   | Not occur | May occur | May occur |
 | Repeatable Read  | Not occur | Not occur | May occur |
 | Serializable     | Not occur | Not occur | Not occur |
+
+Note:  
+- Dirty:     Dirty reads
+- NonRepeat: Non-repeatable reads
+- Phantom:   Phantom reads
 
