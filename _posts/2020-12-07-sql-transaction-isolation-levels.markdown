@@ -48,7 +48,7 @@ Specifies the following:
 `While T1 is reading, T2 is blocked to insert/delete into a table`
 
 ## Cheatsheet Table
-| Isolation Lvl    | Dirty reads | Non-repeatable reads | Phantoms  |
+| Isolation-Level  | Dirty-Reads | Non-repeatable-Reads | Phantoms  |
 |------------------|-------------|----------------------|-----------|
 | Read Uncommitted | May occur   | May occur            | May occur |
 | Read Committed   | Not occur   | May occur            | May occur |
