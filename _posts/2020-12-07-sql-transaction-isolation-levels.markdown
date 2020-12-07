@@ -47,11 +47,12 @@ Specifies the following:
 - Range locks are placed on the range of key values that match the search conditions of each statement executed in a transaction.  
 `While T1 is reading, T2 is blocked to insert/delete into a table`
 
-## Cheatsheet Table
-| Isolation-Level  | Dirty-Reads | Non-repeatable-Reads | Phantoms  |
-|------------------|-------------|----------------------|-----------|
-| Read Uncommitted | May occur   | May occur            | May occur |
-| Read Committed   | Not occur   | May occur            | May occur |
-| Repeatable Read  | Not occur   | Not occur            | May occur |
-| Serializable     | Not occur   | Not occur            | Not occur |
+## Cheatsheet Table 
+
+| 1                | 2         | 3         | 4         |
+|------------------|-----------|-----------|-----------|
+| Read Uncommitted | May occur | May occur | May occur |
+| Read Committed   | Not occur | May occur | May occur |
+| Repeatable Read  | Not occur | Not occur | May occur |
+| Serializable     | Not occur | Not occur | Not occur |
 
