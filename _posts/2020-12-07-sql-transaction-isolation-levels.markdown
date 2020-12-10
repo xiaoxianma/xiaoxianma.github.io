@@ -83,3 +83,16 @@ with transaction.atomic():
     cursor.execute('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ')
     # logic
 ```
+
+## Select and Update with defaut Isolation Level
+The default isolation level in Django is `Read Committed`.  
+```python
+with transaction.atomic():
+    resource = ResourceModel.objects.select_for_update().filter(size=10).first() # If not found, return None
+    if not resource: return False
+    resource.reserved = True
+    resource.save()
+    return True
+```
+`transaction.atomic` will guarantee all actions are all successful or failed together.  
+`select_for_update` uses `SELECT ... FOR UPDATE;` to lock selected rows until commit.
