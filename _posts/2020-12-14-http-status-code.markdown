@@ -11,7 +11,7 @@ tags:
 ---
 
 # About HTTP status codes
-In HTTP,  you send a numeric status code of 3 digits as part of the response.  
+In HTTP,  you send a numeric status code of **3 digits** as part of the response.  
 
 These status codes have a name associated to recognize them, but the important part is the number.  
 
