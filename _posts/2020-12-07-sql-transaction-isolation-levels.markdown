@@ -94,7 +94,7 @@ UPDATE kv SET v = v + 5 WHERE k = 1;
 COMMIT;
 ```
 
-The default isolation level in Django is `Read Committed`.  
+The default isolation level in Django is `Read Committed`.
 ```python
 with transaction.atomic():
     resource = ResourceModel.objects.select_for_update().filter(size=10).first() # If not found, return None
