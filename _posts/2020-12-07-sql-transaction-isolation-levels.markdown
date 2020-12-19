@@ -84,7 +84,16 @@ with transaction.atomic():
     # logic
 ```
 
-## Select and Update with defaut Isolation Level
+## SELECT FOR UPDATE
+`FOR UPDATE` causes the rows retrieved by the `SELECT` statement to be locked as though for update. This prevents them from being modified or deleted by other transactions until the current transaction ends. That is, other transactions that attempt `UPDATE`, `DELETE`, or `SELECT FOR UPDATE` of these rows will be blocked until the current transaction ends. Also, if an `UPDATE`, `DELETE`, or `SELECT FOR UPDATE` from another transaction has already locked a selected row or rows, `SELECT FOR UPDATE` will wait for the other transaction to complete, and will then lock the return the updated row(or no row, if the row was deleted). With a `SERIALIZABLE` transaction, however, an error will be thrown if a row to be locked has changed since the transaction started.  
+
+```sql
+BEGIN;
+SELECT * FROM kv WHERE k = 1 FOR UPDATE;
+UPDATE kv SET v = v + 5 WHERE k = 1;
+COMMIT;
+```
+
 The default isolation level in Django is `Read Committed`.  
 ```python
 with transaction.atomic():
