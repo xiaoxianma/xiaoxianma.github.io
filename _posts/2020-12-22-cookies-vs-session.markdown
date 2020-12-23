@@ -23,11 +23,11 @@ Cookies are text files stored on the client computer and they are kept of use tr
 When next time browser sends any request to web server then it sends those cookies information to the server and server uses that information to identify the user.
 
 ### Comparison Chart
-| Cookie                        | Session                        |
-|-------------------------------|--------------------------------|
-| Cookies are client-side files | Sessions are server-side files |
-| lifetime set by exp var       | session end when browser close |
-| max size is 4KB               | max size 128MB by default      |
+| Cookie                  | Session                   |
+|-------------------------|---------------------------|
+| client-side files       | server-side files         |
+| lifetime set by exp var | end when browser close    |
+| max size is 4KB         | max size 128MB by default |
 
 ### Rules
 - Rule 1: Never trust user input : cookies are not safe. Use sessions for sensitive data.  
