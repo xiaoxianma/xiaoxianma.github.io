@@ -24,11 +24,11 @@ When next time browser sends any request to web server then it sends those cooki
 
 ### Comparison Chart
 
-| Cookie           | Session           |
-|------------------|-------------------|
-| client side      | server side       |
-| exp based on var | exp browser close |
-| max size 4KB     | max size 128MB    |
+| Cookie                          | Session                 |
+|---------------------------------|-------------------------|
+| client side                     | server side             |
+| exp based on expiration var set | exp after browser close |
+| max size 4KB                    | max size 128MB          |
 
 ### Rules
 - Rule 1: Never trust user input : cookies are not safe. Use sessions for sensitive data.  
