@@ -25,7 +25,7 @@ When next time browser sends any request to web server then it sends those cooki
 ### Comparison Chart
 | Cookie           | Session           |
 |------------------|-------------------|
-| client-side      | server-side       |
+| client side      | server side       |
 | exp based on var | exp browser close |
 | max size 4KB     | max size 128MB    |
 
